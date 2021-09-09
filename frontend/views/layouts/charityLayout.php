@@ -1,4 +1,8 @@
 <?php
+
+/* @var $this \yii\web\View */
+/* @var $content string */
+
 use common\widgets\Alert;
 use frontend\assets\AppAsset;
 use yii\bootstrap4\Breadcrumbs;
@@ -27,7 +31,8 @@ AppAsset::register($this);
         'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar navbar-expand-md navbar-dark bg-dark fixed-top',
+            'class' => 'navbar navbar-dark bg-dark fixed-top
+',
         ],
     ]);
     $menuItems = [
@@ -62,7 +67,7 @@ AppAsset::register($this);
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
         <?= Alert::widget() ?>
-        <?//= $content ?>
+        <?= $content ?>
     </div>
 </main>
 
@@ -77,7 +82,3 @@ AppAsset::register($this);
 </body>
 </html>
 <?php $this->endPage();
-
-
-
-?>
